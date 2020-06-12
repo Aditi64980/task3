@@ -1,13 +1,5 @@
-FROM centos
-RUN yum install python36 -y
-RUN pip3 install --upgrade pip
-RUN pip3 install keras
-RUN pip3 install numpy
-RUN pip3 install pandas
-RUN pip3 install pillow
-RUN pip3 install scikit-learn
-RUN pip3 install opencv-python
-RUN pip3 install matplotlib
-RUN pip3 install tensorflow
+FROM centos:8
 
-CMD ["python3", "./program1.py"]
+MAINTAINER "aditi" <amalhotra1104@gmail.com>
+
+RUN yum install python36 -y && pip3 install --upgrade pip && pip3 install tensorflow && pip3 install keras && pip3 install numpy && pip3 install pandas && pip3 install pillow && pip3 install scikit-learn && pip3 install opencv-python && pip3 install matplotlib
